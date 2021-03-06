@@ -1,9 +1,13 @@
 def leap_year(x):
     if x % 4 == 0:
         if x % 100 == 0:
-            return False
+            if x % 400 == 0:
+                return True
+            else:
+                return False
         else:
             return True
+    
 
 #No error checking on input for leap year. Assume correct input
 if __name__ == "__main__":
